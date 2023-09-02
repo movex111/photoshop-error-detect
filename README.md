@@ -71,7 +71,7 @@ This means you're looking for a sequence of bytes in memory that matches the giv
 | 41 55                   | push r13                              |
 | 41 56                   | push r14                              |
 | 41 57                   | push r15                              |
-| 48 8D AC 24 C0 ?? ?? ?? | lea rbp, [rsp-???]                    | (The exact offset is unknown due to the ?? placeholders)
+| 48 8D AC 24 C0 ?? ?? ?? | lea rbp, [rsp-???]                    | (The exact value is unknown due to the ?? placeholders)
 | 48 81 EC 40 ?? ?? ??    | sub rsp, ???                          | (The exact value is unknown due to the ?? placeholders)
 | 48 C7 45 E8             | mov qword ptr [rbp-18], ???           | (The exact value is unknown due to the lack of further bytes)
 ```
