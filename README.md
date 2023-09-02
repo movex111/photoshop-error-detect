@@ -43,8 +43,8 @@ The actual hooks are found in `hooks.cpp` & `hooks.h`. They represent the modifi
 
 Currently, there are three basic hooks:
 
-1. `hooked_MessageBoxA`: Intercepts the standard Windows MessageBoxA function. This hook allows us to inspect and potentially modify the text being displayed in a message box.
-2. `hooked_CreateWindowEx`: Intercepts the Windows `CreateWindowEx` function. This hook checks if the text of a window being created contains the string "Not a PNG file" and outputs it to the console if it does. This can be useful to detect specific error messages being displayed by Photoshop.
+1. `hooked_MessageBoxA`: Intercepts the standard Windows `MessageBoxA` function. This hook allows us to inspect and potentially modify the text being displayed in a message box.
+2. `hooked_CreateWindowEx`: Intercepts the standard Windows `CreateWindowEx` function. This hook checks if the text of a window being created contains the string "Not a PNG file" and outputs it to the console if it does. This can be useful to detect specific error messages being displayed by Photoshop.
 3. `hooked_PSDialogBox`: This is not a Windows API function but instead appears to be a custom function used by Photoshop. The hook intercepts this function based on a memory pattern search using the `PatternScanner` class. When this function is called, the hook outputs its parameters to the console.
 
 Inside these hook functions, additional filtering can be applied. For example, in `hooked_CreateWindowEx`, we specifically look for the text "Not a PNG file" and only print information if this text is found.
