@@ -104,5 +104,3 @@ If you want to contribute to the development of `photoshop-error-detect`, please
 For direct questions or feedback, you can reach me on Telegram: `@str_va`.
 
 ---
-
-**Note**: Always use this project in an ethical manner. Unauthorized use or distribution of this project for malicious intent or without permission is strictly prohibited.
