@@ -53,7 +53,7 @@ Inside these hook functions, additional filtering can be applied. For example, i
 
 The `PatternScanner` class appears to be responsible for locating specific patterns of bytes within the memory of a module. These patterns usually correspond to certain instructions or sequences of instructions in assembly language. Useful for finding addresses of functions or data in cases where they cannot be directly referenced.
 
-Let's break down the example you've given:
+Let's break down the example:
 
 ```cpp
 uintptr_t address_PSDialogBox = scanner.FindPattern("40 55 56 57 41 54 41 55 41 56 41 57 48 8D AC 24 C0 ?? ?? ?? 48 81 EC 40 ?? ?? ?? 48 C7 45 E8");
