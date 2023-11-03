@@ -45,7 +45,7 @@ Currently, there are three basic hooks:
 
 1. `hooked_MessageBoxA`: Intercepts the standard Windows `MessageBoxA` function. This hook allows us to inspect and potentially modify the text being displayed in a message box.
 2. `hooked_CreateWindowEx`: Intercepts the standard Windows `CreateWindowEx` function. This hook checks if the text of a window being created contains the string "Not a PNG file" and outputs it to the console if it does. This can be useful to detect specific error messages being displayed by Photoshop.
-3. `hooked_PSDialogBox`: This is not a Windows API function but instead appears to be a custom function used by Photoshop. The hook intercepts this function based on a memory pattern search using the `PatternScanner` class. When this function is called, the hook outputs its parameters to the console.
+ 3̶.̶ ̶`̶h̶o̶o̶k̶e̶d̶_̶P̶S̶D̶i̶a̶l̶o̶g̶B̶o̶x̶`̶:̶ ̶T̶h̶i̶s̶ ̶i̶s̶ ̶n̶o̶t̶ ̶a̶ ̶W̶i̶n̶d̶o̶w̶s̶ ̶A̶P̶I̶ ̶f̶u̶n̶c̶t̶i̶o̶n̶ ̶b̶u̶t̶ ̶i̶n̶s̶t̶e̶a̶d̶ ̶a̶p̶p̶e̶a̶r̶s̶ ̶t̶o̶ ̶b̶e̶ ̶a̶ ̶c̶u̶s̶t̶o̶m̶ ̶f̶u̶n̶c̶t̶i̶o̶n̶ ̶u̶s̶e̶d̶ ̶b̶y̶ ̶P̶h̶o̶t̶o̶s̶h̶o̶p̶.̶ ̶T̶h̶e̶ ̶h̶o̶o̶k̶ ̶i̶n̶t̶e̶r̶c̶e̶p̶t̶s̶ ̶t̶h̶i̶s̶ ̶f̶u̶n̶c̶t̶i̶o̶n̶ ̶b̶a̶s̶e̶d̶ ̶o̶n̶ ̶a̶ ̶m̶e̶m̶o̶r̶y̶ ̶p̶a̶t̶t̶e̶r̶n̶ ̶s̶e̶a̶r̶c̶h̶ ̶u̶s̶i̶n̶g̶ ̶t̶h̶e̶ ̶`̶P̶a̶t̶t̶e̶r̶n̶S̶c̶a̶n̶n̶e̶r̶`̶ ̶c̶l̶a̶s̶s̶.̶ ̶W̶h̶e̶n̶ ̶t̶h̶i̶s̶ ̶f̶u̶n̶c̶t̶i̶o̶n̶ ̶i̶s̶ ̶c̶a̶l̶l̶e̶d̶,̶ ̶t̶h̶e̶ ̶h̶o̶o̶k̶ ̶o̶u̶t̶p̶u̶t̶s̶ ̶i̶t̶s̶ ̶p̶a̶r̶a̶m̶e̶t̶e̶r̶s̶ ̶t̶o̶ ̶t̶h̶e̶ ̶c̶o̶n̶s̶o̶l̶e̶.̶
 
 Inside these hook functions, additional filtering can be applied. For example, in `hooked_CreateWindowEx`, we specifically look for the text "Not a PNG file" and only print information if this text is found.
 
